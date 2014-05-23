@@ -1,0 +1,10 @@
+<zk>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('nl.gerbranict.ckezsample.MyViewModel')"
+		validationMessages="@id('vmsgs')">
+		<ckeditor value="@bind(vm.editableText)" onChange="@command('changed')"/>
+		<hlayout>Each onblur event will trigger an update of the value server-side : <label value="@load(vm.changes)" /></hlayout>
+		<button label="Do something" onClick="@command('finishedEditing')"/>
+	</window>
+	
+</zk>
